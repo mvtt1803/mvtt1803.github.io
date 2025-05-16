@@ -1,7 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mai Vũ Trung Tín - Portfolio</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+        }
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            line-height: 1.6; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px;
+        }
+        .header { 
+            text-align: center; 
+            border-bottom: 3px solid var(--primary); 
+            padding-bottom: 15px;
+        }
+        .project-card {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        a { color: var(--secondary); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <div class="header">
+        <h1>Mai Vũ Trung Tín</h1>
+        <p>Senior Software Engineering Student | Saigon University</p>
+        <div class="contact">
+            📞 <a href="tel:+0839224015">+0839 224 015</a> |
+            📧 <a href="mailto:maivutrungtin@gmail.com">Email</a> |
+            💼 <a href="https://facebook.com/kyurem.mai">Facebook</a>
+        </div>
+    </div>
+
+    <section class="education">
+        <h2>🎓 Education</h2>
+        <h3>Saigon University (2021-Present)</h3>
+        <p>B.S. Software Engineering | GPA: 2.6/4.0</p>
+        <h3>Nguyen Chi Thanh High School (2017-2020)</h3>
+        <p>Graduated with "Good Student" Honor</p>
+    </section>
+
+    <section class="projects">
+        <h2>💻 Key Projects</h2>
+        <div class="project-card">
+            <h3>Social Media Clone (2025)</h3>
+            <p>Technologies: React, Node.js, MongoDB, WebSockets</p>
+            <ul>
+                <li>Implemented real-time comment/like features</li>
+                <li>Collaborated with 4-member development team</li>
+            </ul>
+        </div>
+
+        <div class="project-card">
+            <h3>Food Ordering UI Redesign (2025)</h3>
+            <p>Tools: Figma, Material Design</p>
+            <ul>
+                <li>Redesigned 80% of interface screens</li>
+                <li>Proposed API integration points</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="skills">
+        <h2>🛠 Technical Skills</h2>
+        <div class="skills-container">
+            <div>
+                <h3>Programming</h3>
+                <ul>
+                    <li>Java</li>
+                    <li>C/C++</li>
+                    <li>HTML/CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Tools</h3>
+                <ul>
+                    <li>VS Code</li>
+                    <li>Git/GitHub</li>
+                    <li>React Basics</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
