@@ -6,79 +6,7 @@
     <title>Mai Vũ Trung Tín - Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        body {
-            background-color: #f5f5f5;
-            color: #333;
-            margin-left: 220px;
-        }
-
-        .sidenav {
-            width: 220px;
-            background-color: #1a1a1a;
-            border-right: 1px solid #333;
-        }
-
-        .sidenav .user-view {
-            padding: 32px 32px 16px;
-        }
-
-        .profile-pic {
-            width: 180px;      
-            height: 180px;    
-            border-radius: 50%;
-            border: 2px solid #00ccaa;
-            display: block;
-            margin: 0 auto 20px;
-            object-fit: cover;
-        }
-
-        .sidenav .social-links {
-            text-align: center;
-            padding: 0 32px 15px;
-        }
-
-        .sidenav .social-links a {
-            margin: 0 10px;
-            color: #00ccaa;
-            transition: opacity 0.3s;
-        }
-
-        .sidenav .social-links a:hover {
-            opacity: 0.8;
-        }
-
-        .sidenav li > a {
-            color: #e0e0e0;
-            padding: 0 30px;
-            font-size: 0.9rem;
-        }
-
-        .sidenav li > a > i {
-            color: #00ccaa;
-            margin-right: 15px;
-            width: 24px;
-            text-align: center;
-        }
-
-        .sidenav li:hover,
-        .sidenav li.active {
-            background-color: rgba(0, 204, 170, 0.1);
-        }
-
-        main {
-            padding: 2rem;
-            min-height: 100vh;
-        }
-
-        section {
-            padding: 2rem 0;
-            border-bottom: 1px solid #444;
-        }
-        section:last-child {
-            border-bottom: none;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -86,7 +14,7 @@
 <ul class="sidenav sidenav-fixed" id="main-sidenav">
     <li>
         <div class="user-view">
-            <img src="assets/img/profile.jpg" class="circle profile-pic" alt="Mai Vũ Trung Tín Profile Picture">
+            <img src="assets/img/profile.jpg" class="profile-pic" alt="Mai Vũ Trung Tín Profile Picture">
             <div class="social-links">
                 <a href="https://github.com/mvtt1803" target="_blank">
                     <i class="fab fa-github fa-lg"></i>
@@ -105,16 +33,16 @@
 </ul>
 
 <!-- Main Content -->
-<main style="padding: 40px">
+<main>
     <h1>Mai Vũ Trung Tín</h1>
-    <h3>Senior IT Student</h3>
-    <p>Welcome to my portfolio! I am a final year IT student at Saigon University, passionate about software development and UI/UX design.</p>
-    <p>Feel free to explore my projects and get in touch!</p>
+    <h3 class="grey-text text-darken-1">Senior IT Student</h3>
+    <p class="flow-text">Welcome to my portfolio! I am a final year IT student at Saigon University, passionate about software development and UI/UX design.</p>
+    <p class="flow-text">Feel free to explore my projects and get in touch!</p>
 
     <!-- About Section -->
     <section id="about">
         <h4 class="teal-text text-lighten-2">About Me</h4>
-            <p class="flow-text">Final year IT student passionate about software development and UI/UX design. Experienced in academic projects focusing on web development and mobile applications.</p>
+        <p class="flow-text">Final year IT student passionate about software development and UI/UX design. Experienced in academic projects focusing on web development and mobile applications.</p>
     </section>
 
     <!-- Education Section -->
@@ -123,7 +51,7 @@
         <div class="card">
             <div class="card-content">
                 <span class="card-title">Saigon University</span>
-                <p class="grey-text">B.S. Information Technology (2021-2025)</p>
+                <p class="grey-text text-darken-2">B.S. Information Technology (2021-2025)</p>
                 <ul>
                     <li>Current GPA: 2.60/4.00</li>
                     <li>Relevant Coursework: Software Engineering, Web Development, Database Systems</li>
@@ -135,46 +63,46 @@
     <!-- Skills Section -->
     <section id="skills">
         <h4 class="teal-text text-lighten-2">Skills</h4>
-            <div class="row">
-                <div class="col s12 m6">
-                    <h5>Languages</h5>
-                    <div class="chip">C/C++</div>
-                    <div class="chip">Python</div>
-                    <div class="chip">Java</div>
-                </div>
-                <div class="col s12 m6">
-                    <h5>Tools & Frameworks</h5>
-                    <div class="chip">Spring Boot</div>
-                    <div class="chip">Git/GitHub</div>
-                    <div class="chip">Figma</div>
-                </div>
+        <div class="row">
+            <div class="col s12 m6">
+                <h5>Languages</h5>
+                <div class="chip">C/C++</div>
+                <div class="chip">Python</div>
+                <div class="chip">Java</div>
             </div>
+            <div class="col s12 m6">
+                <h5>Tools & Frameworks</h5>
+                <div class="chip">Spring Boot</div>
+                <div class="chip">Git/GitHub</div>
+                <div class="chip">Figma</div>
+            </div>
+        </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
         <h4 class="teal-text text-lighten-2">Projects</h4>
-            <div class="card">
-                <div class="card-content">
-                    <span class="card-title">Social Media Clone</span>
-                    <p class="grey-text">React, Node.js, MongoDB | Mar 2025</p>
-                    <ul>
-                        <li>Implemented real-time comment/like features</li>
-                        <li>Collaborated with 4-member team using GitHub</li>
-                    </ul>
-                </div>
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">Social Media Clone</span>
+                <p class="grey-text text-darken-2">React, Node.js, MongoDB | Mar 2025</p>
+                <ul>
+                    <li>Implemented real-time comment/like features</li>
+                    <li>Collaborated with 4-member team using GitHub</li>
+                </ul>
             </div>
+        </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
         <h4 class="teal-text text-lighten-2">Get in Touch</h4>
-            <div class="row">
-                <div class="col s12 m6">
-                    <p><i class="fas fa-envelope"></i> maivutrungtin@gmail.com</p>
-                    <p><i class="fas fa-phone"></i> +84 839 224 015</p>
-                </div>
+        <div class="row">
+            <div class="col s12 m6">
+                <p><i class="fas fa-envelope"></i> maivutrungtin@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +84 839 224 015</p>
             </div>
+        </div>
     </section>
 </main>
 
