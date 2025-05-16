@@ -3,101 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mai Vũ Trung Tín - Portfolio</title>
+    <title>Mai Vũ Trung Tín - IT Student</title>
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
+        .side-nav.fixed {
+            width: 240px;
+            padding: 20px 0;
         }
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
-            line-height: 1.6; 
-            max-width: 800px; 
-            margin: 0 auto; 
-            padding: 20px;
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 20px auto;
         }
-        .header { 
-            text-align: center; 
-            border-bottom: 3px solid var(--primary); 
-            padding-bottom: 15px;
+        .section-padding {
+            padding: 50px 0;
         }
-        .project-card {
-            background: #f8f9fa;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        .teal-text {
+            color: #009688 !important;
         }
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-        }
-        a { color: var(--secondary); text-decoration: none; }
-        a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Mai Vũ Trung Tín</h1>
-        <p>Senior Software Engineering Student | Saigon University</p>
-        <div class="contact">
-            📞 <a href="tel:+0839224015">+0839 224 015</a> |
-            📧 <a href="mailto:maivutrungtin@gmail.com">Email</a> |
-            💼 <a href="https://facebook.com/kyurem.mai">Facebook</a>
-        </div>
-    </div>
 
-    <section class="education">
-        <h2>🎓 Education</h2>
-        <h3>Saigon University (2021-Present)</h3>
-        <p>B.S. Software Engineering | GPA: 2.6/4.0</p>
-        <h3>Nguyen Chi Thanh High School (2017-2020)</h3>
-        <p>Graduated with "Good Student" Honor</p>
-    </section>
+<!-- Navigation -->
+<nav class="hide-on-small-only">
+    <ul class="side-nav fixed">
+        <li class="logo">
+            <img src="assets/img/profile.jpg" class="circle profile-pic" alt="Mai Vũ Trung Tín">
+        </li>
+        <li><a href="#about" class="teal-text"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="#education" class="teal-text"><i class="fas fa-graduation-cap"></i> Education</a></li>
+        <li><a href="#skills" class="teal-text"><i class="fas fa-code"></i> Skills</a></li>
+        <li><a href="#projects" class="teal-text"><i class="fas fa-project-diagram"></i> Projects</a></li>
+        <li><a href="#contact" class="teal-text"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+</nav>
 
-    <section class="projects">
-        <h2>💻 Key Projects</h2>
-        <div class="project-card">
-            <h3>Social Media Clone (2025)</h3>
-            <p>Technologies: React, Node.js, MongoDB, WebSockets</p>
-            <ul>
-                <li>Implemented real-time comment/like features</li>
-                <li>Collaborated with 4-member development team</li>
-            </ul>
-        </div>
-
-        <div class="project-card">
-            <h3>Food Ordering UI Redesign (2025)</h3>
-            <p>Tools: Figma, Material Design</p>
-            <ul>
-                <li>Redesigned 80% of interface screens</li>
-                <li>Proposed API integration points</li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="skills">
-        <h2>🛠 Technical Skills</h2>
-        <div class="skills-container">
-            <div>
-                <h3>Programming</h3>
-                <ul>
-                    <li>Java</li>
-                    <li>C/C++</li>
-                    <li>HTML/CSS</li>
-                    <li>JavaScript</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Tools</h3>
-                <ul>
-                    <li>VS Code</li>
-                    <li>Git/GitHub</li>
-                    <li>React Basics</li>
-                </ul>
+<!-- Main Content -->
+<main>
+    <!-- Hero Section -->
+    <section id="hero" class="section teal darken-2 white-text center">
+        <div class="container">
+            <h1>Mai Vũ Trung Tín</h1>
+            <h5>Senior IT Student at Saigon University</h5>
+            <div class="social-links">
+                <a href="https://github.com/mattyDoe" class="white-text"><i class="fab fa-github fa-2x"></i></a>
+                <a href="https://linkedin.com/in/mattydoe" class="white-text"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="https://facebook.com/kyurem.mai" class="white-text"><i class="fab fa-facebook fa-2x"></i></a>
             </div>
         </div>
     </section>
+
+    <!-- About Section -->
+    <section id="about" class="section scrollspy">
+        <div class="container">
+            <h3 class="teal-text">About Me</h3>
+            <p class="flow-text">Final year IT student passionate about software development and UI/UX design. Experienced in academic projects focusing on web development and mobile applications.</p>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section scrollspy grey lighten-4">
+        <div class="container">
+            <h3 class="teal-text">Education</h3>
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">Saigon University</span>
+                    <p class="grey-text">B.S. Information Technology (2021-2025)</p>
+                    <ul>
+                        <li>Current GPA: 2.60/4.00</li>
+                        <li>Relevant Coursework: Software Engineering, Web Development, Database Systems</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section scrollspy">
+        <div class="container">
+            <h3 class="teal-text">Technical Skills</h3>
+            <div class="row">
+                <div class="col s12 m6">
+                    <h5>Languages</h5>
+                    <div class="chip">C/C++</div>
+                    <div class="chip">Python</div>
+                    <div class="chip">Java</div>
+                </div>
+                <div class="col s12 m6">
+                    <h5>Tools & Frameworks</h5>
+                    <div class="chip">Spring Boot</div>
+                    <div class="chip">Git/GitHub</div>
+                    <div class="chip">Figma</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section scrollspy grey lighten-4">
+        <div class="container">
+            <h3 class="teal-text">Academic Projects</h3>
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">Social Media Clone</span>
+                    <p class="grey-text">React, Node.js, MongoDB | Mar 2025</p>
+                    <ul>
+                        <li>Implemented real-time comment/like features</li>
+                        <li>Collaborated with 4-member team using GitHub</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section scrollspy">
+        <div class="container">
+            <h3 class="teal-text">Get in Touch</h3>
+            <div class="row">
+                <div class="col s12 m6">
+                    <p><i class="fas fa-envelope"></i> maivutrungtin@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +0839 224 015</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        M.AutoInit();
+    });
+</script>
 </body>
 </html>
