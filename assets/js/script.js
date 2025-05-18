@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const sidenav = document.querySelectorAll('.sidenav');
     M.Sidenav.init(sidenav);
 
-    // Update active class on click
+    // Update active class only for section links
     document.querySelectorAll('.sidenav a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             document.querySelectorAll('.sidenav li').forEach(item => {
