@@ -69,12 +69,13 @@ section:last-child {
     border-bottom: none;
 }
 
-#projects .card-content a {
+#projects .card-title {
     transition: color 0.3s ease;
-    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 1rem;
 }
 
-#projects .card-content a:hover {
+#projects a:hover .card-title {
     color: #00ccaa !important;
 }
 
@@ -89,7 +90,6 @@ section:last-child {
     transform: scale(1.03);
 }
 
-#projects .card-title {
-    display: block;
-    margin-bottom: 1rem;
+#projects .card-content {
+    padding: 24px;
 }
