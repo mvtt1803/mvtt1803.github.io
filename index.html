@@ -177,39 +177,6 @@
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        M.AutoInit();
-
-        // Enhanced smooth scrolling
-        document.querySelectorAll('.sidenav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetSection = document.querySelector(targetId);
-                
-                if (targetSection) {
-                    // Calculate offset for proper positioning
-                    const yOffset = -20; // Adjust this value if needed
-                    const y = targetSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-                    // Animate the scroll
-                    window.scrollTo({
-                        top: y,
-                        behavior: 'smooth'
-                    });
-
-                    // Remove active class from all items
-                    document.querySelectorAll('.sidenav li').forEach(item => {
-                        item.classList.remove('active');
-                    });
-                    
-                    // Add active class to clicked item
-                    this.parentElement.classList.add('active');
-                }
-            });
-        });
-    });
-</script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
