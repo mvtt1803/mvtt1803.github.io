@@ -178,27 +178,38 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            M.AutoInit();
+    document.addEventListener('DOMContentLoaded', function() {
+        M.AutoInit();
 
-            // Smooth scrolling
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    const targetId = this.getAttribute('href');
-                    if (targetId && targetId.startsWith('#') && document.querySelector(targetId)) {
-                        e.preventDefault();
-                        document.querySelector(targetId).scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
+        // Enhanced smooth scrolling
+        document.querySelectorAll('.sidenav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    // Calculate offset for proper positioning
+                    const yOffset = -20; // Adjust this value if needed
+                    const y = targetSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
-            // Add date script
-            document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-GB', {
-                day: 'numeric', month: 'short', year: 'numeric'
+                    // Animate the scroll
+                    window.scrollTo({
+                        top: y,
+                        behavior: 'smooth'
+                    });
+
+                    // Remove active class from all items
+                    document.querySelectorAll('.sidenav li').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    
+                    // Add active class to clicked item
+                    this.parentElement.classList.add('active');
+                }
             });
         });
-    </script>
+    });
+</script>
 </body>
 </html>
