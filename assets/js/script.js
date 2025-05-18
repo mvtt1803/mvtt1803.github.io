@@ -1,39 +1,35 @@
-// Smooth scroll functionality
+// Initialize Materialize components and smooth scroll
 document.addEventListener('DOMContentLoaded', function() {
-    M.AutoInit();
-
-    // Configure sidenav
+    // Initialize sidenav
     const sidenav = document.querySelectorAll('.sidenav');
     M.Sidenav.init(sidenav);
 
-    // Enhanced smooth scrolling with offset
-    document.querySelectorAll('.sidenav a').forEach(anchor => {
+    // Smooth scroll with offset for fixed navigation
+    document.querySelectorAll('.sidenav a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                // Calculate proper offset for fixed sidenav
-                const yOffset = -20;
-                const y = targetSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            const target = document.querySelector(this.getAttribute('href'));
+            const headerOffset = 80; // Adjust this value based on your header height
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-                window.scrollTo({
-                    top: y,
-                    behavior: 'smooth'
-                });
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
 
-                // Update active state
-                document.querySelectorAll('.sidenav li').forEach(item => {
-                    item.classList.remove('active');
-                });
-                this.parentElement.classList.add('active');
-            }
+            // Update active class
+            document.querySelectorAll('.sidenav li').forEach(item => {
+                item.classList.remove('active');
+            });
+            this.parentElement.classList.add('active');
         });
     });
 
-    // Add current date
+    // Update last modified date
     document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-GB', {
-        day: 'numeric', month: 'short', year: 'numeric'
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric'
     });
 });
