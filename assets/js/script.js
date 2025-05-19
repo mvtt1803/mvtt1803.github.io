@@ -12,11 +12,4 @@ document.addEventListener('DOMContentLoaded', function() {
             this.parentElement.classList.add('active');
         });
     });
-
-    // Update last modified date
-    document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-GB', {
-        day: 'numeric',
-        month: 'short',
-        year: 'numeric'
-    });
 });
